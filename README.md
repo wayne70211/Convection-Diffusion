@@ -68,9 +68,9 @@ Discretization:<br>
 From modified wave number analysis **Leapfrog is unstable**.
 
 ## Simulation Result
-Let <img src="https://latex.codecogs.com/gif.latex?\large&space;u=0.08" title="\large u=0.08" /> , 
-<img src="https://latex.codecogs.com/gif.latex?\large&space;\Delta&space;t=0.05" title="\large \Delta t=0.05" /> ,and
-<img src="https://latex.codecogs.com/gif.latex?\large&space;\Delta&space;x=0.01" title="\large \Delta x=0.01" />
+Let <img src="https://latex.codecogs.com/gif.latex?u=0.08" title="\large u=0.08" /> , 
+<img src="https://latex.codecogs.com/gif.latex?\Delta&space;t=0.05" title="\large \Delta t=0.05" /> ,and
+<img src="https://latex.codecogs.com/gif.latex?\Delta&space;x=0.01" title="\large \Delta x=0.01" />
 
 ### Part 1. Pure convection (α = 0) 
 <p align="center"> 
