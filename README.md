@@ -41,8 +41,43 @@ Discretization:<br>
  
 From modified wave number analysis **Leapfrog is stable**.
 
-## Simulation Result
-Let <img src="https://latex.codecogs.com/gif.latex?\large&space;u=0.08" title="\large u=0.08" />. 
+### Part 2. Convection-diffusion
+
+Let <img src="https://latex.codecogs.com/gif.latex?\alpha&space;=&space;0.001" title="\alpha = 0.001" />
+
+#### (1) Explicit Euler time advancement and second-order central difference for the spatial derivative.
+Discretization:<br>
+
 <p align="center"> 
-<img src="https://github.com/wayne70211/Convection-Diffusion/blob/master/Simulation.gif">
+<img src="https://latex.codecogs.com/gif.latex?\large&space;\frac{T^{n&plus;1}_{j}-T^{n}_{j}}{\Delta&space;t}&space;&plus;&space;u&space;\frac{T^{n}_{j&plus;1}-T^{n}_{j-1}}{2\Delta&space;x}&space;=&space;\alpha&space;\frac{T^{n}_{j&plus;1}-2T^{n}_{j}&plus;T^{n}_{j-1}}{\Delta&space;x^2}" title="\large \frac{T^{n+1}_{j}-T^{n}_{j}}{\Delta t} + u \frac{T^{n}_{j+1}-T^{n}_{j-1}}{2\Delta x} = \alpha \frac{T^{n}_{j+1}-2T^{n}_{j}+T^{n}_{j-1}}{\Delta x^2}" />
+</p>
+
+From Von-Neumann stability analysis **Explicit Euler is stable** when 
+
+<p align="center"> 
+<img src="https://latex.codecogs.com/gif.latex?\large&space;\begin{matrix}&space;\Delta&space;t&space;\leq&space;500&space;\Delta&space;x^2&space;\\&space;\Delta&space;t&space;\leq&space;12.5&space;\Delta&space;x&space;\end{matrix}" title="\large \begin{matrix} \Delta t \leq 500 \Delta x^2 \\ \Delta t \leq 12.5 \Delta x \end{matrix}" />
+</p>
+
+#### (2)	Leapfrog time advancement and the second-order central difference for the spatial derivative. 
+Discretization:<br>
+
+<p align="center"> 
+<img src="https://latex.codecogs.com/gif.latex?\large&space;\frac{T^{n&plus;1}_{j}-T^{n-1}_{j}}{2\Delta&space;t}&space;&plus;&space;u&space;\frac{T^{n}_{j&plus;1}-T^{n}_{j-1}}{2\Delta&space;x}&space;=&space;\alpha&space;\frac{T^{n}_{j&plus;1}-2T^{n}_{j}&plus;T^{n}_{j-1}}{\Delta&space;x^2}" title="\large \frac{T^{n+1}_{j}-T^{n-1}_{j}}{2\Delta t} + u \frac{T^{n}_{j+1}-T^{n}_{j-1}}{2\Delta x} = \alpha \frac{T^{n}_{j+1}-2T^{n}_{j}+T^{n}_{j-1}}{\Delta x^2}" />
+</p>
+ 
+From modified wave number analysis **Leapfrog is unstable**.
+
+## Simulation Result
+Let <img src="https://latex.codecogs.com/gif.latex?\large&space;u=0.08" title="\large u=0.08" /> , 
+<img src="https://latex.codecogs.com/gif.latex?\large&space;\Delta&space;t=0.05" title="\large \Delta t=0.05" /> ,and
+<img src="https://latex.codecogs.com/gif.latex?\large&space;\Delta&space;x=0.01" title="\large \Delta x=0.01" />
+
+### Part 1. Pure convection (α = 0) 
+<p align="center"> 
+<img src="https://github.com/wayne70211/Convection-Diffusion/blob/master/Pure_Convection.gif">
+</p>
+
+### Part 2. Convection-diffusion
+<p align="center"> 
+<img src="https://github.com/wayne70211/Convection-Diffusion/blob/master/Convection_Diffusion.gif">
 </p>
