@@ -14,12 +14,14 @@ CFL=u*dt/dx;
 CF2L=a*dt/(dx*dx);
 T_exact(1:Nt,1:Nx)=0;
 tt=(Nt-1)/Max_time;
+
 % Initial
 T(1:Nt,1:Nx)=0;                                 % Create Space
 T_n(1:Nx)=0;
 XX=0:dx:0.2;
 Nb=0.2/dx+1;
 T(1,1:Nb)=1-(10.*(XX(1:Nb))-1).^2;              % Initial Condition
+
 %% Exact Solution
 for n=1:Nt
     for j=1:Nx
@@ -32,9 +34,9 @@ for n=1:Nt
 end
  
 %% Explicit Euler time advancement and second-order central difference for the spatial derivative.
- for j=2:Nx-1
-     T(2,j)=T(1,j)*(1-2*CF2L)+T(1,j-1)*(CFL/2+CF2L)+T(1,j+1)*(-CFL/2+CF2L);
- end
+for j=2:Nx-1
+    T(2,j)=T(1,j)*(1-2*CF2L)+T(1,j-1)*(CFL/2+CF2L)+T(1,j+1)*(-CFL/2+CF2L);
+end
  
 for n=2:Nt-1
     for j=2:Nx-1
@@ -73,6 +75,7 @@ plot(X,T(8*tt,1:Nx),'linewidth',2)
 xlabel('X')
 ylabel('T')
 legend('Exact Solution only Convection','Explicit Euler with Diffusion')
+
 %% Leapfrog time advancement and the second-order central difference for the spatial derivative.
  
 % Explicit Euler for first step
