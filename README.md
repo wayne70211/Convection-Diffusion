@@ -1,4 +1,4 @@
-# Convection-Diffusion
+# Convection Diffusion
 
 Consider the convection-diffusion equation <br>
 
