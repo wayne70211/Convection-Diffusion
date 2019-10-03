@@ -31,7 +31,7 @@ Discretization:<br>
 <img src="https://latex.codecogs.com/gif.latex?\large&space;\frac{T^{n&plus;1}_{j}-T^{n}_{j}}{\Delta&space;t}&space;&plus;&space;u&space;\frac{T^{n}_{j&plus;1}-T^{n}_{j-1}}{2\Delta&space;x}&space;=&space;0" title="\large \frac{T^{n+1}_{j}-T^{n}_{j}}{\Delta t} + u \frac{T^{n}_{j+1}-T^{n}_{j-1}}{2\Delta x} = 0" />
 </p>
 
-From modified wave number analysis **Explicit Euler is unstable**.
+From modified wave number analysis, **Explicit Euler is unstable**.
 
 #### (2)	Leapfrog time advancement and the second-order central difference for the spatial derivative. 
 Discretization:<br>
@@ -39,7 +39,11 @@ Discretization:<br>
 <p align="center"> 
 <img src="https://latex.codecogs.com/gif.latex?\large&space;\frac{T^{n&plus;1}_{j}-T^{n-1}_{j}}{2\Delta&space;t}&space;&plus;&space;u&space;\frac{T^{n}_{j&plus;1}-T^{n}_{j-1}}{2\Delta&space;x}&space;=&space;0" title="\large \frac{T^{n+1}_{j}-T^{n-1}_{j}}{2\Delta t} + u \frac{T^{n}_{j+1}-T^{n}_{j-1}}{2\Delta x} = 0" /></p>
  
-From modified wave number analysis **Leapfrog is stable**.
+From modified wave number analysis, **Leapfrog is stable** when
+
+<p align="center"> 
+<img src="https://latex.codecogs.com/gif.latex?\large&space;\Delta&space;t&space;\leq&space;12.5&space;\Delta&space;x" title="\large \Delta t \leq 12.5 \Delta x" />
+</p>
 
 ### Part 2. Convection-diffusion
 
@@ -52,7 +56,7 @@ Discretization:<br>
 <img src="https://latex.codecogs.com/gif.latex?\large&space;\frac{T^{n&plus;1}_{j}-T^{n}_{j}}{\Delta&space;t}&space;&plus;&space;u&space;\frac{T^{n}_{j&plus;1}-T^{n}_{j-1}}{2\Delta&space;x}&space;=&space;\alpha&space;\frac{T^{n}_{j&plus;1}-2T^{n}_{j}&plus;T^{n}_{j-1}}{\Delta&space;x^2}" title="\large \frac{T^{n+1}_{j}-T^{n}_{j}}{\Delta t} + u \frac{T^{n}_{j+1}-T^{n}_{j-1}}{2\Delta x} = \alpha \frac{T^{n}_{j+1}-2T^{n}_{j}+T^{n}_{j-1}}{\Delta x^2}" />
 </p>
 
-From Von-Neumann stability analysis **Explicit Euler is stable** when 
+From Von-Neumann stability analysis, **Explicit Euler is stable** when 
 
 <p align="center"> 
 <img src="https://latex.codecogs.com/gif.latex?\large&space;\begin{matrix}&space;\Delta&space;t&space;\leq&space;500&space;\Delta&space;x^2&space;\\&space;\Delta&space;t&space;\leq&space;12.5&space;\Delta&space;x&space;\end{matrix}" title="\large \begin{matrix} \Delta t \leq 500 \Delta x^2 \\ \Delta t \leq 12.5 \Delta x \end{matrix}" />
@@ -65,7 +69,7 @@ Discretization:<br>
 <img src="https://latex.codecogs.com/gif.latex?\large&space;\frac{T^{n&plus;1}_{j}-T^{n-1}_{j}}{2\Delta&space;t}&space;&plus;&space;u&space;\frac{T^{n}_{j&plus;1}-T^{n}_{j-1}}{2\Delta&space;x}&space;=&space;\alpha&space;\frac{T^{n}_{j&plus;1}-2T^{n}_{j}&plus;T^{n}_{j-1}}{\Delta&space;x^2}" title="\large \frac{T^{n+1}_{j}-T^{n-1}_{j}}{2\Delta t} + u \frac{T^{n}_{j+1}-T^{n}_{j-1}}{2\Delta x} = \alpha \frac{T^{n}_{j+1}-2T^{n}_{j}+T^{n}_{j-1}}{\Delta x^2}" />
 </p>
  
-From modified wave number analysis **Leapfrog is unstable**.
+From modified wave number analysis, **Leapfrog is unstable**.
 
 ## Simulation Result
 Let <img src="https://latex.codecogs.com/gif.latex?u=0.08" title="\large u=0.08" /> , 
